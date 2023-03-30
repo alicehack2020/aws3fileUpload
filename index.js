@@ -22,7 +22,7 @@ app.post("/upload",upload.single("file"),async(req, res) => {
    
 })
 app.get("/", (req, res) => {
-  res.send(<>Welcome to s3</>)
+  res.send(<h1>Welcome to s3</h1>)
 })
 
 app.listen(PORT, () => {
