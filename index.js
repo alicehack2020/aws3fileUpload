@@ -1,5 +1,5 @@
 const multer = require("multer")
-var cors = require('cors');
+var cors = require("cors");
 
 const express=require("express")
 const { s3Uploadv2 } = require("./s3Service")
