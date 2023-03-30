@@ -4,14 +4,14 @@ const AWS=require("aws-sdk")
 exports.s3Uploadv2 = async (file) => {
 
     var s3 = new S3({
-        secretAccessKey: process.env.AWS_SECRET_KEY,
-        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-        region: process.env.AWS_REGION
+        secretAccessKey: process.env.AWS_SECRET_KEYX,
+        accessKeyId: process.env.AWS_ACCESS_KEY_IDX,
+        region: process.env.AWS_REGIONX
       });
  
     
     const param = {
-        Bucket: process.env.AWS_BUKET_NAME,
+        Bucket: process.env.AWS_BUKET_NAMEX,
         Key: `uploads/${uuid()}-${file.originalname}`,
         Body:file.buffer,
     }
