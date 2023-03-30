@@ -8,7 +8,7 @@ const app = express()
 app.use(cors())
 
 const storage=multer.memoryStorage()
-
+const PORT=process.env.PORT
 const upload = multer({ storage })
 app.post("/upload",upload.single("file"),async(req, res) => {
     try {
@@ -21,8 +21,11 @@ app.post("/upload",upload.single("file"),async(req, res) => {
     }
    
 })
+app.get("/", (req, res) => {
+  res.send(<>Welcome to s3</>)
+})
 
-app.listen(4000, () => {
+app.listen(PORT, () => {
     console.log("server started")
 })
 
